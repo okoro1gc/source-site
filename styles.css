@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Poppins",sans-serif;font-size:12px}
+
+/* Pink sticky navbar */
+.catalog-nav{
+  position:sticky; top:0; z-index:9999;
+  background:#e98aa8; border-bottom:1px solid #f4cfe0;
+}
+.catalog-nav .inner{
+  max-width:1200px; margin:0 auto;
+  display:flex; gap:24px; justify-content:center; align-items:center;
+  padding:10px 12px;
+}
+.catalog-nav a{
+  color:#fff; text-transform:uppercase; font-weight:600;
+  font-size:14px; text-decoration:none; cursor:pointer;
+}
+.catalog-nav a:hover{ opacity:.9; }
+
+body.has-sticky-nav{ scroll-padding-top:60px; }
