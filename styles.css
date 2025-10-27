@@ -1,23 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font-family:"Poppins",sans-serif;font-size:12px}
-
-/* Pink sticky navbar */
-.catalog-nav{
-  position:sticky; top:0; z-index:9999;
-  background:#e98aa8; border-bottom:1px solid #f4cfe0;
+/* ============================
+   GLOBAL LAYOUT
+   ============================ */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
 }
-.catalog-nav .inner{
-  max-width:1200px; margin:0 auto;
-  display:flex; gap:24px; justify-content:center; align-items:center;
-  padding:10px 12px;
-}
-.catalog-nav a{
-  color:#fff; text-transform:uppercase; font-weight:600;
-  font-size:14px; text-decoration:none; cursor:pointer;
-}
-.catalog-nav a:hover{ opacity:.9; }
 
-body.has-sticky-nav{ scroll-padding-top:60px; }
+/* ============================
+   NAVIGATION BAR
+   ============================ */
+.catalog-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f8a9b4; /* light pink */
+  border-bottom: 1px solid #e3e3e3;
+  padding: 10px 0;
+}
+
+.catalog-nav .inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.catalog-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  transition: color 0.2s ease, background 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.catalog-nav a:hover {
+  background-color: #ffb8c7;
+  color: #000;
+}
+
+/* ============================
+   TABLE STYLING (GOOGLE SHEETS LOOK)
+   ============================ */
+.ritz .waffle {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ritz .waffle th,
+.ritz .waffle td {
+  border: 1px solid #d9d9d9;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: middle;
+  background-color: #ffffff;
+  font-size: 11pt;
+  color: #000000;
+}
+
+.ritz .waffle th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Hover effect for rows */
+.ritz .waffle tr:hover td {
+  background-color: #f9f9f9;
+}
+
+/* Uniform cell classes (no background colors) */
+.ritz .waffle .s0,
+.ritz .waffle .s1,
+.ritz .waffle .s2,
+.ritz .waffle .s3,
+.ritz .waffle .s4,
+.ritz .waffle .s5,
+.ritz .waffle .s6,
+.ritz .waffle .s7,
+.ritz .waffle .s8,
+.ritz .waffle .s9,
+.ritz .waffle .s10,
+.ritz .waffle .s11,
+.ritz .waffle .s12,
+.ritz .waffle .s13,
+.ritz .waffle .s14,
+.ritz .waffle .s15 {
+  background-color: #ffffff !important;
+  border: 1px solid #d9d9d9 !important;
+}
+
+/* ============================
+   LINKS
+   ============================ */
+a {
+  color: #1155cc;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #e98aa8;
+}
+
+/* ============================
+   PAGE HEADERS / TITLES
+   ============================ */
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* ============================
+   IMAGES INSIDE TABLE
+   ============================ */
+.ritz .waffle img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  object-position: left bottom;
+  pointer-events: none;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 768px) {
+  .catalog-nav .inner {
+    gap: 10px;
+  }
+
+  .catalog-nav a {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .ritz .waffle th,
+  .ritz .waffle td {
+    font-size: 10pt;
+  }
+}
